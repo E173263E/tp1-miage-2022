@@ -38,10 +38,13 @@ TIP: [Rappel Git] Trois dépôts sont ici utilisés: le dépot Github de l'ensei
 * Observer le code du projet `todolist-debut-ex1`
 
 *Le code est-il structuré en couches ? Quel problèmes ce code peut-il poser ?*
+Non le code n'est pas structuré en couche.
 
 *Où se trouve le code métier (voir la règle de gestion RG 1) ?*
+Dans TodoListController
 
 *Cette règle est-elle facilement testable par un test unitaire ?*
+non à cause de la temporalité nécessaire pour la tester
 
 * Lancer une base PostgreSQL en Docker dans un terminal (on lance ici la base en mode interactif pour visualiser son activité. Pour la lancer en tâche de fond, remplacer les options `it` par `d` comme 'daemon'):
 ```bash
