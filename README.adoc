@@ -51,6 +51,14 @@ non à cause de la temporalité nécessaire pour la tester
 docker run -it -e POSTGRES_PASSWORD=password -p 5432:5432 postgres
 ```
 *Expliquer cette ligne de commande (y compris les options utilisées)*
+Cette commande comporte plusieurs champs. Chaque champs est expliquer ci-dessous :
+- docker run : permet de demander à Docker d'exécuter un conteneur
+- -d : Option qui permet de dire à Docker d'exécuter le conteneur en arrière-plan. Le prompt est alors toujours libre tant que le conteneur est actif.
+- -e : Option qui permet de définir des variables d’environnement pour le conteneur. Cette option sera utile pour la suivante où un mot de passe est demandé.
+- POSTGRES_PASSWORD=password : définit le pseudo utilisé pour le conteneur. Donc ici, le mot de passe du Docker est “password”
+- -p 5432:5432 : Cette option (-p) permet d'exposer des ports sur l'ordinateur qui sont redirigés vers un autre port du conteneur. En l'occurence ici, cela permet de rediriger le port 5432 de l'ordinateur vers le port 5432 du conteneur.
+- postgres : Cela permet donc d'exécuter une base postre.
+
 
 * Compléter le code manquant dans la méthode `TodoListController.createTodoItem()`
 
@@ -96,6 +104,8 @@ Source : http://leanpub.com/get-your-hands-dirty-on-clean-architecture[Tom Hombe
   - la couche `domain` qui contient les entités (au sens DDD, pas au sens JPA). En général des classes complexes (méthodes riches, relations entre les entités)
 
 *Rappeler en quelques lignes les grands principes de l'architecture hexagonale.*
+L'architecture hexagonale décompose un système en plusieurs composants : Web Adapter, External System Adapter, Persistence Adapter et External System Adapter. Ces composants sont toujours couplés faiblements pour une cohésion forte. 
+Les avantages de l'architecture hexagonale sont l'isolation des aspects techniques et les aspects fonctionnels, chacun dans un domaine différent (respectivement dans les adapteurs et le domaine). Elle favorise 
 
 Compléter ce code avec une fonctionnalité de création de `TodoItem`  persisté en base et appelé depuis un endpoint REST `POST /todos` qui :
 
