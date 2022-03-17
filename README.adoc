@@ -41,14 +41,21 @@ TIP: [Rappel Git] Trois dépôts sont ici utilisés: le dépot Github de l'ensei
 ---------------------------------------------------------------------------------------------------------------
 *Le code est-il structuré en couches ? Quel problèmes ce code peut-il poser ?*
 
-Non le code n'est pas structuré en couche.
+Non le code n'est pas structuré en couche. Le fait qu'il ne soit pas structuré en couche peut rendre des dépendances entre les composants, car un changement effectué peut impacter l'ensemble du système.
+
+Une architecutre standard est composé de 5 couches :
+
+- Couche interaction
+- Couche fonctionnalités
+- Couche règles de gestion
+- Couche noyau de l'application
+- Couche de la base de données
 ---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 
 *Où se trouve le code métier (voir la règle de gestion RG 1) ?*
 
-Dans TodoListController
-
+Le code métier se trouve dans le fichier 'TodoListController'
 ---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 *Cette règle est-elle facilement testable par un test unitaire ?*
@@ -77,7 +84,7 @@ Cette commande comporte plusieurs champs. Chaque champs est expliquer ci-dessous
 
 - -p 5432:5432 : Cette option (-p) permet d'exposer des ports sur l'ordinateur qui sont redirigés vers un autre port du conteneur. En l'occurence ici, cela permet de rediriger le port 5432 de l'ordinateur vers le port 5432 du conteneur.
 
-- postgres : Cela permet donc d'exécuter une base postre.
+- postgres : Cela permet donc d'exécuter une base postgre.
 ---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 
