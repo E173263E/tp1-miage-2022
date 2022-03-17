@@ -144,10 +144,15 @@ Source : http://leanpub.com/get-your-hands-dirty-on-clean-architecture[Tom Hombe
   - la couche `application` qui contient tous les contrats : ports (interfaces) et les implémentations des ports d'entrée (ou "use case") et qui servent à orchestrer les entités.
   - la couche `domain` qui contient les entités (au sens DDD, pas au sens JPA). En général des classes complexes (méthodes riches, relations entre les entités)
 
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 *Rappeler en quelques lignes les grands principes de l'architecture hexagonale.*
-L'architecture hexagonale décompose un système en plusieurs composants : Web Adapter, External System Adapter, Persistence Adapter et External System Adapter. Ces composants sont toujours couplés faiblements pour une cohésion forte. 
-Les avantages de l'architecture hexagonale sont l'isolation des aspects techniques et les aspects fonctionnels, chacun dans un domaine différent (respectivement dans les adapteurs et le domaine). Elle favorise 
 
+L'architecture hexagonale décompose un système en plusieurs composants : Web Adapter, External System Adapter, Persistence Adapter et External System Adapter. Ces composants sont toujours couplés faiblements pour une cohésion forte. 
+
+Les avantages de l'architecture hexagonale sont l'isolation des aspects techniques et les aspects fonctionnels, chacun dans un domaine différent (respectivement dans les adapteurs et le domaine). Elle favorise 
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 Compléter ce code avec une fonctionnalité de création de `TodoItem`  persisté en base et appelé depuis un endpoint REST `POST /todos` qui :
 
 * prend un `TodoItem` au format JSON dans le body (voir exemple de contenu plus haut);
