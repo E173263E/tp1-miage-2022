@@ -5,7 +5,7 @@ NOTE: TP de deux slots de 1h20
 ## Nom du(des) étudiant(e)(s) de ce monôme/binôme 
 WARNING: NE PAS OUBLIER DE MENTIONNER LES DEUX NOMS SI VOUS ETES EN BINOME!
 
-#XXX# (et #YYY#)
+#PERRIN Maxime et BRIAND Samuel#
 
 Commentaires éventuels des étudiants : #XXXXXX#
 
@@ -37,21 +37,32 @@ TIP: [Rappel Git] Trois dépôts sont ici utilisés: le dépot Github de l'ensei
 
 * Observer le code du projet `todolist-debut-ex1`
 
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 *Le code est-il structuré en couches ? Quel problèmes ce code peut-il poser ?*
 
 Non le code n'est pas structuré en couche.
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 *Où se trouve le code métier (voir la règle de gestion RG 1) ?*
 
 Dans TodoListController
 
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 *Cette règle est-elle facilement testable par un test unitaire ?*
-non à cause de la temporalité nécessaire pour la tester
+
+Non à cause de la temporalité nécessaire pour la tester
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 * Lancer une base PostgreSQL en Docker dans un terminal (on lance ici la base en mode interactif pour visualiser son activité. Pour la lancer en tâche de fond, remplacer les options `it` par `d` comme 'daemon'):
 ```bash
 docker run -it -e POSTGRES_PASSWORD=password -p 5432:5432 postgres
 ```
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 *Expliquer cette ligne de commande (y compris les options utilisées)*
 
 Cette commande comporte plusieurs champs. Chaque champs est expliquer ci-dessous :
@@ -67,11 +78,25 @@ Cette commande comporte plusieurs champs. Chaque champs est expliquer ci-dessous
 - -p 5432:5432 : Cette option (-p) permet d'exposer des ports sur l'ordinateur qui sont redirigés vers un autre port du conteneur. En l'occurence ici, cela permet de rediriger le port 5432 de l'ordinateur vers le port 5432 du conteneur.
 
 - postgres : Cela permet donc d'exécuter une base postre.
-
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 * Compléter le code manquant dans la méthode `TodoListController.createTodoItem()`
-
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 *Pourquoi `todoItemRepository` est-il `null` ? Quelle est la meilleure façon de l'injecter ?*
+
+
+Car l'injection de dépendance n'a pas encore été mise en place. La meilleur façon de l'injecter est, par exemple, de rajouter au dessus de la méthode 'TodoListController(TodoItemRepository)' l'annotation '@Injected'. 
+
+Une annotation permet notamment :
+
+- D'ajouter des informations de documentation supplémentaires
+- Ajouter des contraintes de compilation
+- Associer des méta-données qui peuvent être retrouvées par réflexion
+
+---------------------------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------
 
 * Modifier le code en conséquence.
 
