@@ -39,7 +39,6 @@ public class TodoListController {
 	@ResponseStatus(code = HttpStatus.CREATED)
 	public void createTodoItem(@RequestBody TodoItem todoItem) {
 		// Code à compléter
-		// this.todoItemRepository.save(new TodoItem(todoItem.getId(), todoItem.getTime(), todoItem.getContent()));
 		this.todoItemRepository.save(todoItem);
 	}
 
