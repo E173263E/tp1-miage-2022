@@ -43,7 +43,7 @@ TIP: [Rappel Git] Trois dépôts sont ici utilisés: le dépot Github de l'ensei
 
 Non le code n'est pas structuré en couche. Le fait qu'il ne soit pas structuré en couche peut rendre des dépendances entre les composants, car un changement effectué peut impacter l'ensemble du système.
 
-Une architecutre standard est composé de 5 couches :
+Une architecutre standard est composée de 5 couches :
 
 - Couche interaction
 - Couche fonctionnalités
