@@ -94,7 +94,7 @@ Cette commande comporte plusieurs champs. Chaque champs est expliquer ci-dessous
 *Pourquoi `todoItemRepository` est-il `null` ? Quelle est la meilleure façon de l'injecter ?*
 
 
-Car l'injection de dépendance n'a pas encore été mise en place. La meilleur façon de l'injecter est, par exemple, de rajouter au dessus de la méthode 'TodoListController(TodoItemRepository)' l'annotation '@Injected'. 
+Car l'injection de dépendance n'a pas encore été mise en place. La meilleur façon de l'injecter est, l'injection par constructeur. Par exemple, de rajouter au dessus de la méthode 'TodoListController(TodoItemRepository)' l'annotation '@Injected'. Cela permet de définir ce dont nous avons besoin pour ainsi les instancier et les récupérer.
 
 Une annotation permet notamment :
 
