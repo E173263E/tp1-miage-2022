@@ -150,7 +150,7 @@ Source : http://leanpub.com/get-your-hands-dirty-on-clean-architecture[Tom Hombe
 
 L'architecture hexagonale décompose un système en plusieurs composants : Web Adapter, External System Adapter, Persistence Adapter et External System Adapter. Ces composants sont toujours couplés faiblements pour une cohésion forte. 
 
-Les avantages de l'architecture hexagonale sont l'isolation des aspects techniques et les aspects fonctionnels, chacun dans un domaine différent (respectivement dans les adapteurs et le domaine). Elle favorise 
+Les avantages de l'architecture hexagonale sont l'isolation des aspects techniques et les aspects fonctionnels, chacun dans un domaine différent (respectivement dans les adapteurs et le domaine). Elle permet notamment de rendre indépendant le code métier du reste de l’application. De plus, le code métier est pérennisé, car il peut être extrait pour travailler dans une infrastructure différente. Le seul problème est que cette architecture favorise la duplication mais ce problème est peu impactant si les bons outils sont utilisés.
 ---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 Compléter ce code avec une fonctionnalité de création de `TodoItem`  persisté en base et appelé depuis un endpoint REST `POST /todos` qui :
