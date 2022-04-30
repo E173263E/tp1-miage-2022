@@ -179,6 +179,8 @@ Nous allons devoir écrire des tests de réactivité. C'est-à-dire de tester le
 
 Un premier test pour vérifier si un item a été créé dans les 24 dernières heures, et un autre test pour vérifier si un item a été créé depuis les 24 dernières heures.
 
+Pour des raisons de temps d'attente, nous avons décidé de diminuer le temps de ces tests à 20 minutes, temps estimé de l'excercice 3. 
+
 ---------------------------------------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------------------------------------
 
