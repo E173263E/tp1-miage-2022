@@ -40,7 +40,7 @@ TIP: [Rappel Git] Trois dépôts sont ici utilisés: le dépot Github de l'ensei
 ---------------------------------------------------------------------------------------------------------------
 *Le code est-il structuré en couches ? Quel problèmes ce code peut-il poser ?*
 
-Non le code n'est pas structuré en couche. Le fait qu'il ne soit pas structuré en couche peut rendre des dépendances entre les composants, car un changement effectué peut impacter l'ensemble du système.
+Non le code n'est pas structuré en couche. Le fait qu'il ne soit pas structuré en couche peut augmenter les dépendances entre les composants, car un changement effectué peut impacter l'ensemble du système.
 
 Une architecutre standard est composée de 5 couches :
 
@@ -71,17 +71,17 @@ docker run -it -e POSTGRES_PASSWORD=password -p 5432:5432 postgres
 ---------------------------------------------------------------------------------------------------------------
 *Expliquer cette ligne de commande (y compris les options utilisées)*
 
-Cette commande comporte plusieurs champs. Chaque champs est expliquer ci-dessous :
+Cette commande comporte plusieurs champs. Chaque champ est expliqué ci-dessous :
 
 - docker run : permet de demander à Docker d'exécuter un conteneur
 
-- -d : Option qui permet de dire à Docker d'exécuter le conteneur en arrière-plan. Le prompt est alors toujours libre tant que le conteneur est actif.
+- -d : option qui permet de dire à Docker d'exécuter le conteneur en arrière-plan. Le prompt est alors toujours libre tant que le conteneur est actif.
 
-- -e : Option qui permet de définir des variables d’environnement pour le conteneur. Cette option sera utile pour la suivante où un mot de passe est demandé.
+- -e : option qui permet de définir des variables d’environnement pour le conteneur. Cette option sera utile pour la suivante où un mot de passe est demandé.
 
 - POSTGRES_PASSWORD=password : définit le pseudo utilisé pour le conteneur. Donc ici, le mot de passe du Docker est “password”
 
-- -p 5432:5432 : Cette option (-p) permet d'exposer des ports sur l'ordinateur qui sont redirigés vers un autre port du conteneur. En l'occurence ici, cela permet de rediriger le port 5432 de l'ordinateur vers le port 5432 du conteneur.
+- -p 5432:5432 : cette option (-p) permet d'exposer des ports sur l'ordinateur qui sont redirigés vers un autre port du conteneur. En l'occurence ici, cela permet de rediriger le port 5432 de l'ordinateur vers le port 5432 du conteneur.
 
 - postgres : Cela permet donc d'exécuter une base postgre.
 ---------------------------------------------------------------------------------------------------------------
@@ -93,7 +93,7 @@ Cette commande comporte plusieurs champs. Chaque champs est expliquer ci-dessous
 *Pourquoi `todoItemRepository` est-il `null` ? Quelle est la meilleure façon de l'injecter ?*
 
 
-Car l'injection de dépendance n'a pas encore été mise en place. La meilleur façon de l'injecter est, l'injection par constructeur. Par exemple, de rajouter au dessus de la méthode 'TodoListController(TodoItemRepository)' l'annotation '@Injected'. Cela permet de définir ce dont nous avons besoin pour ainsi les instancier et les récupérer.
+Car l'injection de dépendance n'a pas encore été mise en place. La meilleur façon de l'injecter est l'injection par constructeur. Par exemple, de rajouter au dessus de la méthode 'TodoListController(TodoItemRepository)' l'annotation '@Injected'. Cela permet de définir ce dont nous avons besoin pour ainsi les instancier et les récupérer.
 
 Une annotation permet notamment :
 
