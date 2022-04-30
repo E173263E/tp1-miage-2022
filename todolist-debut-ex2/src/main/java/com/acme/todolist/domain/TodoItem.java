@@ -86,6 +86,10 @@ public class TodoItem {
 			return false;
 		return true;
 	}
+
+	public void setContent(String content) {
+		this.content = content;
+	}
 	
 
 }
